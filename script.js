@@ -180,10 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function deleteBookFromCompleted(bookId) {
-      confirm("Are you sure want to delete the book?");
-      books = books.filter((book) => book.id !== bookId);
-      saveBooks();
-      loadBooks();
+      const confirmDelete = confirm("Are you sure want to delete the book?");
+      if (confirmDelete) {
+        books = books.filter((book) => book.id !== bookId);
+        saveBooks();
+        loadBooks();
+      }
     }
 
     function addBookToCompletedList(book) {
