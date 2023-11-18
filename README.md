@@ -9,4 +9,4 @@ The project is to makae a working bookshelf web app that could:
 - Delete a book from the list
 - Store books using `localStorage`
 
-The project made using vanilla JS and [Bulma](bulma.io) CSS framework for the styling.
+The project made using vanilla JS and [Bulma](https://www.bulma.io) CSS framework for the styling.
