@@ -10,3 +10,4 @@ The project is to makae a working bookshelf web app that could:
 - Store books using `localStorage`
 
 The project made using vanilla JS and [Bulma](https://www.bulma.io) CSS framework for the styling.
+You can view the project by click this [link](https://bookshelf-webapp.vercel.app/)
