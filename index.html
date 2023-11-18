@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <title>Bookshelf app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  </head>
+  <body class="mx-4">
+    <section class="container is-max-desktop pt-4">
+      <h1 class="title">Hello!</h1>
+      <p class="subtitle">What are you going to read today?</p>
+    </section>
+
+    <section class="container is-max-desktop pt-4">
+      <div class="level is-mobile">
+        <div class="level-item has-text-centered px-4 py-4">
+          <div>
+            <p class="is-size-6">Books</p>
+            <p
+              class="title"
+              id="totalBook">
+              0
+            </p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered px-4 py-4">
+          <div>
+            <p class="is-size-6">To-be Read</p>
+            <p
+              class="title"
+              id="totalToRead">
+              0
+            </p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered px-4 py-4">
+          <div>
+            <p class="is-size-6">Completed</p>
+            <p
+              class="title"
+              id="totalCompleted">
+              0
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container is-max-desktop pt-4">
+      <div class="columns">
+        <div class="column">
+          <p class="is-size-5 pb-1">Search for a title</p>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input
+                type="text"
+                id="searchInput"
+                class="input"
+                placeholder="Search title..." />
+              <span class="icon is-small is-left">
+                <ion-icon name="search"></ion-icon>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <p class="is-size-5 pb-1">Add new book to the collection</p>
+          <button
+            class="button is-link is-fullwidth"
+            id="addBook"
+            data-target="modalForm">
+            Add book
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container is-max-desktop pt-4">
+      <div class="columns">
+        <div class="column">
+          <p class="subtitle has-text-centered has-text-weight-bold">
+            To-be Read
+          </p>
+          <div
+            class="tile is-vertical"
+            id="toBeList"></div>
+        </div>
+
+        <div class="column">
+          <p class="subtitle has-text-centered has-text-weight-bold">
+            Completed
+          </p>
+          <div
+            class="tile is-vertical"
+            id="completedList"></div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal"
+      id="modalForm">
+      <div
+        class="modal-background"
+        id="modalBackground"></div>
+      <div class="modal-card">
+        <form
+          class="modal-card-body box field"
+          id="addBookForm">
+          <label
+            for="bookTitle"
+            class="label">
+            Book Title
+          </label>
+          <input
+            name="bookTitle"
+            id="bookTitle"
+            type="text"
+            class="input"
+            placeholder="e.g., Harry Potter"
+            required />
+          <label
+            for="bookAuthor"
+            class="label">
+            Author
+          </label>
+          <input
+            name="bookAuthor"
+            id="bookAuthor"
+            type="text"
+            class="input"
+            placeholder="e.g., J.K. Rowling"
+            required />
+          <label
+            for="bookYear"
+            class="label">
+            Year
+          </label>
+          <div class="control">
+            <input
+              name="bookYear"
+              type="number"
+              id="bookYear"
+              class="input"
+              placeholder="e.g., 2018"
+              required />
+          </div>
+          <div class="field"></div>
+          <div class="field">
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                id="isCompleted" />
+              Completed
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="button is-link"
+            id="submitBook">
+            Save book
+          </button>
+          <button
+            class="button"
+            id="cancelSubmit">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="script.js"
+      type="text/javascript"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
