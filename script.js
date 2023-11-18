@@ -156,6 +156,20 @@ document.addEventListener("DOMContentLoaded", () => {
         addBookToCompletedList(book);
       });
       levelRightElement.appendChild(completeButton);
+
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add(
+        "button",
+        "level-item",
+        "is-small",
+        "is-danger",
+        "is-light"
+      );
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", () => {
+        deleteBookFromCompleted(book.id);
+      });
+      levelRightElement.appendChild(deleteButton);
     }
 
     function undoBookFromCompletedList(bookId) {
